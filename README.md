@@ -1,4 +1,9 @@
 ## Final Project Pemrograman Lanjut Kelompok 5
+Untuk final project Pemrograman Lanjut kelompok kita akan membuat program
+
+
+
+
 
 ## Anggota Kelompok
 - caezarlov nugraha         (23081010182)
