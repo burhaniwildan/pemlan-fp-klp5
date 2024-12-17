@@ -11,3 +11,6 @@ Untuk final project Pemrograman Lanjut kelompok kita akan membuat <br />
 - Rama Afriandi             (23081010158)
 - Wildan Fikri Burhani      (23081010179)
 - Ahmad Arif Choirudin Anas (23081010196)
+
+## Bahasa
+- C
