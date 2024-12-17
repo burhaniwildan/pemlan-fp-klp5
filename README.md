@@ -1,6 +1,5 @@
 ## Final Project Pemrograman Lanjut Kelompok 5
-Untuk final project Pemrograman Lanjut kelompok kita akan membuat program
-
+Untuk final project Pemrograman Lanjut kelompok kita akan membuat "Aplikasi pengelolaan produk di gudang penyimpanan"
 
 
 
