@@ -7,7 +7,7 @@ Untuk final project Pemrograman Lanjut kelompok kita akan membuat <br />
 
 ## Anggota Kelompok
 
-| Name                                 | NPM           |
+| Nama                                 | NPM           |
 |--------------------------------------|--------------|
 | Caezarlov Nugraha                    | 23081010182  |
 | Amsal Adrian Ginting                 | 23081010151  |
