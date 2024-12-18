@@ -92,18 +92,6 @@ void SelectionSort(Barang brg[], int n, int kolom, int ascending) {
     }
 }
 
-//penulisan mantra ajaib bahasa c
-
-//struct untuk data barang
-
-//data barang
-
-//void untuk menampilkan data barang
-
-// void untuk melakukan bubble sort
-
-
-
 //void untuk insertions sort
 void InsertionSort(Barang brg[], int n, int kolom, int ascending) {
     int i;
