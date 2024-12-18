@@ -92,15 +92,6 @@ void SelectionSort(Barang brg[], int n, int kolom, int ascending) {
     }
 }
 
-
-
-
-
-
-
-
-
-
 //penulisan mantra ajaib bahasa c
 
 //struct untuk data barang
@@ -108,7 +99,40 @@ void SelectionSort(Barang brg[], int n, int kolom, int ascending) {
 //data barang
 
 //void untuk menampilkan data barang
+void InsertionSort(Barang brg[], int n, int kolom, int ascending) {
+    int i;
+    int j;
+    for (i = 1; i < n; i++) {
+        Barang key = brg[i];
+        j = i - 1;
+        int compare;
 
+        while (j >= 0) {
+            switch (kolom) {
+                case 1:
+                    compare = strcmp(key.id, brg[j].id);
+                    break;
+                case 2:
+                    compare = strcasecmp(key.nama, brg[j].nama);
+                    break;
+                case 3:
+                    compare = strcmp(key.kategori, brg[j].kategori);
+                    break;
+                case 4:
+                    compare = (key.stok > brg[j].stok) - (key.stok < brg[j].stok);
+                    break;
+            }
+
+            if ((ascending && compare < 0) || (!ascending && compare > 0)) {
+                brg[j + 1] = brg[j];
+                j--;
+            } else {
+                break;
+            }
+        }
+        brg[j + 1] = key;
+    }
+}
 // void untuk melakukan bubble sort
 
 
