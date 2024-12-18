@@ -99,6 +99,12 @@ void SelectionSort(Barang brg[], int n, int kolom, int ascending) {
 //data barang
 
 //void untuk menampilkan data barang
+
+// void untuk melakukan bubble sort
+
+
+
+//void untuk insertions sort
 void InsertionSort(Barang brg[], int n, int kolom, int ascending) {
     int i;
     int j;
@@ -133,12 +139,6 @@ void InsertionSort(Barang brg[], int n, int kolom, int ascending) {
         brg[j + 1] = key;
     }
 }
-// void untuk melakukan bubble sort
-
-
-
-//void untuk insertions sort
-
 // syntax untuk melakukan jump search
 
 // syntax utama
