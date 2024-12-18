@@ -139,6 +139,64 @@ void InsertionSort(Barang brg[], int n, int kolom, int ascending) {
         brg[j + 1] = key;
     }
 }
+//SYNTAX UNTUK MELAKUKAN BINARY SEARCH
+int binarySearch(Barang brg[], int n, int kolom, char *key) {
+    int low = 0, high = n - 1;
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        int compare = 0;
+
+        switch (kolom) {
+            case 1:
+                compare = strcmp(brg[mid].id, key);
+                break;
+            case 2:
+                compare = strcasecmp(brg[mid].nama, key);
+                break;
+            case 3:
+                compare = strcmp(brg[mid].kategori, key);
+                break;
+            case 4:
+                compare = atoi(key) - brg[mid].stok;
+                break;
+        }
+
+        if (compare == 0)
+            return mid;
+
+        if (compare < 0)
+            low = mid + 1;
+        else
+            high = mid - 1;
+    }
+    return -1;
+}
+//SYNTAX UNTUK MELAKUKAN SEQUENSIAL SEARCH
+int sequentialSearch(Barang brg[], int n, int kolom, char *key) {
+    int i;
+    for (i = 0; i < n; i++) {
+        int compare = 0;
+
+        switch (kolom) {
+            case 1:
+                compare = strcmp(brg[i].id, key);
+                break;
+            case 2:
+                compare = strcasecmp(brg[i].nama, key);
+                break;
+            case 3:
+                compare = strcmp(brg[i].kategori, key);
+                break;
+            case 4:
+                compare = atoi(key) - brg[i].stok;
+                break;
+        }
+
+        if (compare == 0)
+            return i;
+    }
+    return -1;
+}
 // syntax untuk melakukan jump search
 int jumpSearch(Barang brg[], int n, int kolom, char *key) {
     int step = 3;
