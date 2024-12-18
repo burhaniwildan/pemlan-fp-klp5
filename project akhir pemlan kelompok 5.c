@@ -26,6 +26,72 @@ void printDataBarang(Barang brg[], int n) {
     printf("\n");
 }
 
+//void untuk bubble sort
+void BubbleSort(Barang brg[], int n, int kolom, int ascending) {
+    int i;
+    int j;
+    for (i = 0; i < n - 1; i++) {
+        for (j = 0; j < n - i - 1; j++) {
+            int compare = 0;
+            switch (kolom) {
+                case 1:
+                    compare = strcmp(brg[j].id, brg[j + 1].id);
+                    break;
+                case 2:
+                    compare = strcasecmp(brg[j].nama, brg[j + 1].nama);
+                    break;
+                case 3:
+                    compare = strcmp(brg[j].kategori, brg[j + 1].kategori);
+                    break;
+                case 4:
+                    compare = (brg[j].stok > brg[j + 1].stok) - (brg[j].stok < brg[j + 1].stok);
+                    break;
+            }
+
+            if ((ascending && compare > 0) || (!ascending && compare < 0)) {
+                Barang temp = brg[j];
+                brg[j] = brg[j + 1];
+                brg[j + 1] = temp;
+            }
+        }
+    }
+}
+
+//void untuk selection sort
+void SelectionSort(Barang brg[], int n, int kolom, int ascending) {
+    int i;
+    int j;
+    for (i = 0; i < n - 1; i++) {
+        int minMaxIdx = i;
+        for (j = i + 1; j < n; j++) {
+            int compare = 0;
+            switch (kolom) {
+                case 1:
+                    compare = strcmp(brg[j].id, brg[minMaxIdx].id);
+                    break;
+                case 2:
+                    compare = strcasecmp(brg[j].nama, brg[minMaxIdx].nama);
+                    break;
+                case 3:
+                    compare = strcmp(brg[j].kategori, brg[minMaxIdx].kategori);
+                    break;
+                case 4:
+                    compare = (brg[j].stok > brg[minMaxIdx].stok) - (brg[j].stok < brg[minMaxIdx].stok);
+                    break;
+            }
+
+            if ((ascending && compare < 0) || (!ascending && compare > 0)) {
+                minMaxIdx = j;
+            }
+        }
+        if (minMaxIdx != i) {
+            Barang temp = brg[i];
+            brg[i] = brg[minMaxIdx];
+            brg[minMaxIdx] = temp;
+        }
+    }
+}
+
 
 
 
@@ -45,7 +111,7 @@ void printDataBarang(Barang brg[], int n) {
 
 // void untuk melakukan bubble sort
 
-//void untuk selection sort
+
 
 //void untuk insertions sort
 
