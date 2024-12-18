@@ -140,5 +140,29 @@ void InsertionSort(Barang brg[], int n, int kolom, int ascending) {
     }
 }
 // syntax untuk melakukan jump search
+int jumpSearch(Barang brg[], int n, int kolom, char *key) {
+    int step = 3;
+    int prev = 0;
+    int i;
 
+    while (prev < n &&
+           ((kolom == 1 && strcmp(brg[(step < n ? step : n) - 1].id, key) < 0) ||
+            (kolom == 2 && strcasecmp(brg[(step < n ? step : n) - 1].nama, key) < 0) ||
+            (kolom == 3 && strcmp(brg[(step < n ? step : n) - 1].kategori, key) < 0))) {
+        prev = step;
+        step += 3;
+        if (prev >= n)
+            return -1;
+    }
+
+    // Linear search dalam blok
+    for (i = prev; i < (step < n ? step : n); i++) {
+        if ((kolom == 1 && strcmp(brg[i].id, key) == 0) ||
+            (kolom == 2 && strcasecmp(brg[i].nama, key) == 0) ||
+            (kolom == 3 && strcmp(brg[i].kategori, key) == 0)) {
+            return i;
+        }
+    }
+    return -1;
+}
 // syntax utama
