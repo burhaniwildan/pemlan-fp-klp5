@@ -1,0 +1,10 @@
+    BRG001 Laptop Elektronik 15
+    BRG002 Meja Furniture 10
+    BRG003 Kursi Furniture 20
+    BRG004 HP Elektronik 25
+    BRG005 Buku Stationary 50
+    BRG006 Printer Elektronik 5
+    BRG007 Papan Stationary 8
+    BRG008 Lampu Elektronik 30
+    BRG009 Gunting Stationary 12
+    BRG010 Kasur Furniture 3
